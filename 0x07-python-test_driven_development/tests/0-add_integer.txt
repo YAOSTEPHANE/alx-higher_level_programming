@@ -1,61 +1,32 @@
-A test to for adding two inteter
+Test 0-add_integer.py
+---------------------
 
-Import Python module + collections
->>> import sys
->>> sys.path.insert(1, '../')
->>> lib = __import__("0-add_integer")
->>> add_integer = lib.add_integer
+>>> add_integer = __import__('0-add_integer').add_integer
 
-# Normal addition test
->>> add_integer(0)
-98
->>> add_integer(-1)
-97
->>> add_integer(10.5)
+When 1 argument positive/negative
+-----------------------------
+>>> add_integer(20)
+118
+>>> add_integer(10)
 108
+>>> add_integer(-12)
+86
+>>> add_integer(-198)
+-100
+>>> add_integer(-12565586556656562)
+-12565586556656464
 
-# Type Errors
->>> add_integer(10+5j)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer([])
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer({})
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer(set())
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
-
->>> add_integer("")
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
-
-# Two input addition type errors
->>> add_integer(10, 10+5j)
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
->>> add_integer(10, [])
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
->>> add_integer(10, {})
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
->>> add_integer(10, set())
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
-
->>> add_integer(10, "")
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+When 2 arguments positives/negatives int/float
+-----------------------------------------------
+>>> add_integer(1,2)
+3
+>>> add_integer(-4,18)
+14
+>>> add_integer(-4.5, -6)
+-10
+>>> add_integer(21435346345645, -9)
+21435346345636
+>>> add_integer(-35445, -345421)
+-380866
+>>> add_integer(354.7263, 34.6)
+388
